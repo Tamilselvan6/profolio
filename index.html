@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamilselvan - Profolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0a682b9dd5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span style="color: #ff004f;">T</span>amilSelvan.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Porfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars"  onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Bachelor of Engineering</p>
+                <h1>Hi, I'm <span>Tamilselvan</span> <br> From Madurai</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------about---------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img style="background-color:whitesmoke;" src="/image/boy.png" alt="NotFound">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>To get an opportunity where I can make the best of my potential and contribute to the
+                        organization's growth. I am driven by a passion for excellence and a strong determination to
+                        succeed in any task I undertake.
+                        With a proactive mindset and a constant thirst for learning, I am committed to continuously
+                        improving and adding value to the organization's objectives.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Developing</span><br>Designing Web/App interfaces.</li>
+                            <li><span>Creative </span><br>Imaginative ideas for projects.</li>
+                            <li><span>Adaptability </span><br>Ability to be flexible in all situations.</li>
+                            <li><span>Leadership</span><br>Leading and guiding a team to achieve their goals.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - 2023</span><br>Website Developing Intership at Kevell Crop</li>
+                            <li><span>2023 - 2024</span><br>UI/UX at CodeSoft</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021</span><br>BE from VCET ,Madurai </li>
+                            <li><span>2019</span><br>HSC from VMHSS </li>
+                            <li><span>2017</span><br>SSL from VMHSS </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------services--------------- -->
+    <div id="services">
+        <div class="container">
+            <div class="sub-title">My Services</div>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos recusandae sed natus temporibus
+                        quae ipsum earum magni modi ad, nobis enim voluptatem adipisci tempora nemo soluta dolorem
+                        quibusdam beatae? Veniam.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos recusandae sed natus temporibus
+                        quae ipsum earum magni modi ad, nobis enim voluptatem adipisci tempora nemo soluta dolorem
+                        quibusdam beatae? Veniam.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos recusandae sed natus temporibus
+                        quae ipsum earum magni modi ad, nobis enim voluptatem adipisci tempora nemo soluta dolorem
+                        quibusdam beatae? Veniam.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------portfolio----------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/work-1.png" alt="NotFound">
+                    <div class="layer">
+                        <h3>Deltify WebSite</h3>
+                        <p>A creative agency website offering expert store designing, revenue-boosting services, and
+                            showcasing their portfolio of web design projects </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work-2.png" alt="NotFound">
+                    <div class="layer">
+                        <h3>E-Login</h3>
+                        <p>A creative agency website offering expert store designing, revenue-boosting services, and
+                            showcasing their portfolio of web design projects </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work-3.png" alt="NotFound">
+                    <div class="layer">
+                        <h3>Xtra Blog</h3>
+                        <p>A creative agency website offering expert store designing, revenue-boosting services, and
+                            showcasing their portfolio of web design projects </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ---------------contact------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>21cse058tamilselvan@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>9384870052</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/indreamoflife"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://instagram.com/tamil_editz_2k"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vtamilselvanbe/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="/image/my-cv.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"> </textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>21cse058tamilselvan@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemen.style.right= "0";
+        }
+        function closemenu(){
+            sidemen.style.right= "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwsdSVNLRFQtU9gkDdeWz3ZB6DKzuLo-fs7lvm-kd00jJFwfH2D4QbZrdD8TUTVsWbTLg/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            formData.append('Timestamp', new Date().toLocaleString());
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+
+</html>
