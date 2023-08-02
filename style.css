@@ -316,8 +316,9 @@ nav .fas{
         background-image: url(image/phone-background.png);
     }
     .header-text{
-        margin-top: 180%;
+        margin-top: 100%;
         font-size: 16px;
+        padding-top:40px;
     }
     .header-text h1{
         font-size: 30px;
