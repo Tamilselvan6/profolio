@@ -291,7 +291,9 @@ form input,form textarea{
     margin: 15px;
     color: #fff;
     font-size: 18px;
-    border-radius: 6px;   
+    border-radius: 6px;  
+    border: 1px solid #ababab;
+    background: rgba(255, 255, 255, 0.1); 
 }
 form .btn2{
     padding: 14px 60px;
@@ -370,7 +372,9 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
-    
+    .contact-right{
+        margin-left: -18px;
+    }
     .copyright{
         font-size: 14px;
     }
