@@ -33,3 +33,9 @@ Feel free to customize the website according to your needs:
 - Update the content in index.html to reflect your personal information, skills, and projects.
 - Replace the images in the /image folder with your own project screenshots or profile picture.
 - Modify the style.css file to change the website's appearance.
+
+## Contact
+If you have any questions or want to get in touch with me, feel free to reach out via email at 21cse058tamilselvan@gmail.com
+
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or create a pull request.
