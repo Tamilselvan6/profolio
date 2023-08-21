@@ -404,8 +404,9 @@ nav .fas{
     .left{
         margin-bottom: 30px;
     }
-    .potrait{
-        height: 120px;
+    .img-fluid img{
+        height: 180px;
+        width: auto;
     }
     .sub-title{
         font-size: 40px;
