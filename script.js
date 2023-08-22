@@ -72,7 +72,7 @@ ScrollReveal().reveal('.gallery', { origin: 'right', interval: 150 });
 ScrollReveal().reveal('.sub-title, .contact-left, .contact-right', revealConfig);
 ScrollReveal().reveal('.copyright', { origin: 'bottom' });
 ScrollReveal().reveal('.header-img', { scale: 1.7 });
-ScrollReveal().reveal('.tab-links, .tab-contents', { origin: 'bottom', interval: 100 });
+ScrollReveal().reveal('.tab-links,  { origin: 'bottom', interval: 100 });
 ScrollReveal().reveal('.fa-brands', { origin: 'bottom', interval: 150, distance: '35px' });
 ScrollReveal().reveal('.hire-description', { delay: 400 });
 ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
