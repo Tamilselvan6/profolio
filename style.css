@@ -442,8 +442,27 @@ nav .fas{
         font-size: 14px;
     }
 }
-#msg{
-    color:#61b752;
-    margin-top: -40px;
-    display: block;
+#notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f82165;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+#notification-message {
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+#close-notification {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
