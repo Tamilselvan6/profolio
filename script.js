@@ -19,24 +19,33 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwsdSVNLRFQtU9gkDdeWz3ZB6DKzuLo-fs7lvm-kd00jJFwfH2D4QbZrdD8TUTVsWbTLg/exec';
-const form = document.forms['submit-to-google-sheet'];
-const msg = document.getElementById("msg");
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    formData.append('Timestamp', new Date().toLocaleString());
+const contactForm = document.getElementById("contact-form");
+const notification = document.getElementById("notification");
+const closeNotification = document.getElementById("close-notification");
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function () {
-                msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = event.target.Name.value;
+    const email = event.target.email.value;
+    const message = event.target.Message.value;
+
+    const subject = "New Message from " + name;
+    const mailtoLink = "mailto:21cse058tamilselvan@gmail.com" +
+                      "?subject=" + encodeURIComponent(subject) +
+                      "&body=" + encodeURIComponent(message);
+
+    window.location.href = mailtoLink;
+
+    setTimeout(function() {
+        notification.style.display = "block";
+    }, 1000); 
+});
+
+closeNotification.addEventListener("click", function() {
+    // Close the notification
+    notification.style.display = "none";
 });
 
 ScrollReveal({
