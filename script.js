@@ -47,6 +47,15 @@ closeNotification.addEventListener("click", function() {
     // Close the notification
     notification.style.display = "none";
 });
+window.addEventListener("scroll", function () {
+    var scrollToTop = document.getElementById("scrollToTop");
+    if (window.scrollY > 200) {
+        scrollToTop.classList.add("visible");
+    } else {
+        scrollToTop.classList.remove("visible");
+    }
+});
+
 
 ScrollReveal({
     reset: true,
