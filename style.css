@@ -442,6 +442,7 @@ nav .fas{
         font-size: 14px;
     }
 }
+/* ----------------noti message--------------- */
 #notification {
     position: fixed;
     top: 20px;
@@ -467,7 +468,7 @@ nav .fas{
     font-size: 18px;
 }
 
-
+/* ------------arrow---------------- */
 #scrollToTop {
     position: fixed;
     bottom: 30px;
@@ -497,6 +498,25 @@ nav .fas{
 #scrollToTop.visible {
     opacity: 1;
     visibility: visible;
+}
+
+#scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+/* --------------Scroll bar--------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff004f;
+  border-radius: 5px;
 }
 
 
