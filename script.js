@@ -23,6 +23,7 @@ function opentab(tabname) {
 const contactForm = document.getElementById("contact-form");
 const notification = document.getElementById("notification");
 const closeNotification = document.getElementById("close-notification");
+const notificationSound = new Audio("Notification.mp3");
 
 contactForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -39,6 +40,7 @@ contactForm.addEventListener("submit", function(event) {
     window.location.href = mailtoLink;
 
     setTimeout(function() {
+        notificationSound.play();
         notification.style.display = "block";
     }, 1000); 
 });
