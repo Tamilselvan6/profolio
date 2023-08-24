@@ -42,7 +42,12 @@ contactForm.addEventListener("submit", function(event) {
     setTimeout(function() {
         notificationSound.play();
         notification.style.display = "block";
-    }, 1000); 
+        
+        // Hide the notification after 20 seconds
+        setTimeout(function() {
+            notification.style.display = "none";
+        }, 20000);
+    }, 1000);
 });
 
 closeNotification.addEventListener("click", function() {
