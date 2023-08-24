@@ -485,7 +485,7 @@ nav .fas{
     text-decoration: none;
     
 }
-#scrollToTop a:hover {
+#scrollToTop a:active {
     background-color: #ff004f;
 }
 
