@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel=icon href="image/me.jpg">
+    <title>Tamilselvan - Profolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(0, 0, 0);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container {
+            padding: 10px 10%;
+        }
+
+        .wrapper {
+            border-radius: 8px;
+            padding: 20px;
+            width: auto;
+        }
+
+        .sub-title {
+            font-size: 50px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .sub-content {
+            letter-spacing: 4px;
+            margin: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Rating Stars */
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .star {
+            font-size: 38px;
+            color: gold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star.active {
+            color: #f39c12;
+        }
+
+        /* Form Fields */
+        .name,
+        .opinion {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        form textarea,
+        form input {
+            font-size: x-large;
+            color: #fff;
+            border-radius: 6px;
+            border: 1px solid #ababab;
+            background: rgba(255, 255, 255, 0.1);
+            font-family: monospace;
+        }
+
+        .btn.submit,
+        .btn.view-feedback {
+            background-color: #ff004f;
+            color: #fff;
+            border-radius: 5px;
+            padding: 12px 35px;
+            font-size: large;
+        }
+
+
+        #reviewContainer {
+            margin-top: 20px;
+            border-top: 1px solid #616161;
+            padding-top: 20px;
+        }
+
+        .review {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background: rgba(70, 70, 70, 0.384);
+        }
+
+        .review p {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .review p b {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ff004f;
+            border-radius: 5px;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px 5%;
+            }
+
+            .sub-title {
+                font-size: 26px;
+            }
+
+            .sub-content {
+                font-size: 14px;
+                letter-spacing: 1px;
+                margin: 10px 0px 20px;
+                font-weight: 100;
+            }
+
+            .wrapper {
+                padding: 10px;
+            }
+
+            .star {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input[type="text"],
+            textarea {
+                font-size: 12px;
+            }
+            .btn.submit,
+            .btn.view-feedback {
+                font-size: medium;
+            }
+            .review {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+            .review p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <h1 class="sub-title">Give Your Feedback</h1>
+                <h5 class="sub-content"> Your Feedback May Take me to NextLevel.</h5>
+
+                <form id="reviewForm" action="#">
+                    <div class="rating"> <!-- Removed "name" attribute from div -->
+                        <input type="number" name="Rating" hidden>
+                        <i class='bx bx-star star' style="--i: 0;"></i>
+                        <i class='bx bx-star star' style="--i: 1;"></i>
+                        <i class='bx bx-star star' style="--i: 2;"></i>
+                        <i class='bx bx-star star' style="--i: 3;"></i>
+                        <i class='bx bx-star star' style="--i: 4;"></i>
+                    </div>
+                    <div class="name">
+                        <label for="name">Name:</label>
+                        <input style="font-size: x-large;" type="text" id="name" name="Name"
+                            placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="opinion">
+                        <label for="opinion">Opinion:</label>
+                        <textarea id="opinion" name="Opinion" cols="30" rows="5" placeholder="Your opinion..."
+                            required></textarea>
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" id="submitBtn" class="btn submit">Submit</button>
+                        <button type="button" id="viewFeedbackBtn" class="btn view-feedback">View Feedbacks</button>
+                    </div>
+                </form>
+                <div id="reviewContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSrbnUAxkRsS_BHKzj2BMRgbfe7Dp87kZsUeiWTeb-gLnxXQIMEKdarR4kNcI-Y1lts0e0_cCXk_VDL/pub?output=csv';
+        const reviewContainer = document.getElementById('reviewContainer');
+        const viewFeedbackBtn = document.getElementById('viewFeedbackBtn');
+
+        async function fetchReviews() {
+            try {
+                const response = await fetch(csvUrl);
+                const csvData = await response.text();
+                const rows = csvData.split('\n');
+                const headers = rows[0].split(',');
+
+                for (let i = 1; i < rows.length; i++) {
+                    const values = rows[i].split(',');
+                    if (values.length === headers.length) {
+                        const reviewDiv = document.createElement('div');
+                        reviewDiv.classList.add('review');
+                        let reviewContent = '';
+                        for (let j = 0; j < headers.length; j++) {
+                            reviewContent += `<p><b>${headers[j]}:</b> ${values[j]}</p>`;
+                        }
+                        reviewDiv.innerHTML = reviewContent;
+                        reviewContainer.appendChild(reviewDiv);
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching reviews:', error);
+            }
+        }
+        viewFeedbackBtn.addEventListener('click', () => {
+            reviewContainer.style.display = 'block'; // Show the feedback container
+            fetchReviews(); // Fetch and display reviews when the button is clicked
+        });
+        reviewContainer.style.display = 'none';
+
+    </script>
+    <script>
+        const allStar = document.querySelectorAll('.rating .star')
+        const ratingValue = document.querySelector('.rating input')
+
+        allStar.forEach((item, idx) => {
+            item.addEventListener('click', function () {
+                ratingValue.value = idx + 1
+
+                allStar.forEach((i, iIdx) => {
+                    i.classList.toggle('bxs-star', iIdx <= idx);
+                    i.classList.toggle('bx-star', iIdx > idx);
+                });
+            });
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby8bucHgduYVR-w_nSQL5VJSsSAO4lHdxPwCkGJEzz7ZZWJK5nakAXcY2wTQ1P1_L8qRw/exec';
+        const reviewForm = document.getElementById('reviewForm'); // Use getElementById instead of forms['submit-to-google-sheet']
+
+        reviewForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(reviewForm);
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Review submitted successfully!', response);
+                        reviewForm.reset();
+                    } else {
+                        console.error('Review submission failed!', response);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
