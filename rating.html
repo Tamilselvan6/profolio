@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel=icon href="image/me.jpg">
+    <link rel="stylesheet" href="style-merge.css">
     <title>Tamilselvan - Profolio</title>
+    <script src="https://kit.fontawesome.com/0a682b9dd5.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <style>
         * {
@@ -191,14 +193,17 @@
             textarea {
                 font-size: 12px;
             }
+
             .btn.submit,
             .btn.view-feedback {
                 font-size: medium;
             }
+
             .review {
                 padding: 8px;
                 margin-bottom: 8px;
             }
+
             .review p {
                 font-size: 14px;
             }
@@ -242,6 +247,11 @@
             </div>
         </div>
     </div>
+    <div id="notification" class="notification">
+        <span id="notification-message">Thanks for Feedback!</span>
+        <button id="close-notification"><i class="fa-regular fa-circle-xmark" style="color: #ffffff;"></i></button>
+    </div>
+    
     <script>
         const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSrbnUAxkRsS_BHKzj2BMRgbfe7Dp87kZsUeiWTeb-gLnxXQIMEKdarR4kNcI-Y1lts0e0_cCXk_VDL/pub?output=csv';
         const reviewContainer = document.getElementById('reviewContainer');
@@ -297,6 +307,20 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycby8bucHgduYVR-w_nSQL5VJSsSAO4lHdxPwCkGJEzz7ZZWJK5nakAXcY2wTQ1P1_L8qRw/exec';
         const reviewForm = document.getElementById('reviewForm'); // Use getElementById instead of forms['submit-to-google-sheet']
 
+        const notification = document.getElementById('notification');
+    const closeNotificationBtn = document.getElementById('close-notification');
+
+    const showNotification = () => {
+        notification.style.display = 'block';
+        setTimeout(() => {
+            hideNotification();
+        }, 3000); // Hide notification after 3 seconds (adjust as needed)
+    };
+
+    const hideNotification = () => {
+        notification.style.display = 'none';
+    };
+
         reviewForm.addEventListener('submit', e => {
             e.preventDefault();
             const formData = new FormData(reviewForm);
@@ -308,6 +332,7 @@
                 .then(response => {
                     if (response.ok) {
                         console.log('Review submitted successfully!', response);
+                        showNotification();
                         reviewForm.reset();
                     } else {
                         console.error('Review submission failed!', response);
@@ -317,6 +342,10 @@
                     console.error('Error:', error);
                 });
         });
+        closeNotificationBtn.addEventListener('click', () => {
+        hideNotification();
+    });
+
     </script>
 
 </body>
