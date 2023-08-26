@@ -519,4 +519,24 @@ nav .fas{
   border-radius: 5px;
 }
 
+/* Feedback button */
+#feedbackBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+#feedbackBtn a {
+    background-color: #ff004f;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
 
