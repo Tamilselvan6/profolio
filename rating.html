@@ -306,9 +306,9 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycby8bucHgduYVR-w_nSQL5VJSsSAO4lHdxPwCkGJEzz7ZZWJK5nakAXcY2wTQ1P1_L8qRw/exec';
         const reviewForm = document.getElementById('reviewForm'); // Use getElementById instead of forms['submit-to-google-sheet']
-
+        const notificationSound = new Audio("Notification.mp3");
         const notification = document.getElementById('notification');
-    const closeNotificationBtn = document.getElementById('close-notification');
+        const closeNotificationBtn = document.getElementById('close-notification');
 
     const showNotification = () => {
         notification.style.display = 'block';
@@ -333,6 +333,7 @@
                     if (response.ok) {
                         console.log('Review submitted successfully!', response);
                         showNotification();
+                        notificationSound.play();
                         reviewForm.reset();
                     } else {
                         console.error('Review submission failed!', response);
