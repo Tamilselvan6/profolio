@@ -240,7 +240,7 @@
                     </div>
                     <div class="btn-group">
                         <button type="submit" id="submitBtn" class="btn submit">Submit</button>
-                        <button type="button" id="viewFeedbackBtn" class="btn view-feedback">View Feedbacks</button>
+                        <button type="button" id="viewFeedbackBtn" class="btn view-feedback" onclick="disableButton('viewFeedbackBtn')">View Feedbacks</button>
                     </div>
                 </form>
                 <div id="reviewContainer">
@@ -348,6 +348,14 @@
         hideNotification();
     });
 
+    </script>
+        <script>
+        function disableButton(buttonId) {
+            var button = document.getElementById(buttonId);
+            if (button) {
+                button.disabled = true;
+            }
+        }
     </script>
 
 </body>
