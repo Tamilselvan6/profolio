@@ -25,7 +25,7 @@ const notification = document.getElementById("notification");
 const closeNotification = document.getElementById("close-notification");
 const notificationSound = new Audio("Notification.mp3");
 
-contactForm.addEventListener("submit", function(event) {
+contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const name = event.target.Name.value;
@@ -34,35 +34,35 @@ contactForm.addEventListener("submit", function(event) {
 
     const subject = "New Message from " + name;
     const mailtoLink = "mailto:21cse058tamilselvan@gmail.com" +
-                      "?subject=" + encodeURIComponent(subject) +
-                      "&body=" + encodeURIComponent(message);
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(message);
 
     window.location.href = mailtoLink;
 
-    setTimeout(function() {
+    setTimeout(function () {
         notificationSound.play();
         notification.style.display = "block";
-        
+
         // Hide the notification after 20 seconds
-        setTimeout(function() {
+        setTimeout(function () {
             notification.style.display = "none";
         }, 20000);
     }, 1000);
 });
 
-closeNotification.addEventListener("click", function() {
+closeNotification.addEventListener("click", function () {
     // Close the notification
     notification.style.display = "none";
 });
+
 window.addEventListener("scroll", function () {
     var scrollToTop = document.getElementById("scrollToTop");
-    if (window.scrollY > 200) {
+    if (window.scrollY > 1000) {
         scrollToTop.classList.add("visible");
     } else {
         scrollToTop.classList.remove("visible");
     }
 });
-
 function clickEffect(e) {
     var d = document.createElement("div");
     d.className = "clickEffect";
@@ -71,20 +71,6 @@ function clickEffect(e) {
     d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
 }
 document.addEventListener('click', clickEffect);
-ScrollReveal({
-    reset: true,
-    distance: '95px',
-    duration: 1500,
-    delay: 250,
-    viewFactor: 0.15
-});
-
-const revealConfig = {
-    origin: 'bottom',
-    scale: 0.5,
-    interval: 200
-};
-
 ScrollReveal({
     reset: true,
     distance: '95px',
