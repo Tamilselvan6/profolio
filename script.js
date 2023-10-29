@@ -63,6 +63,27 @@ window.addEventListener("scroll", function () {
     }
 });
 
+function clickEffect(e) {
+    var d = document.createElement("div");
+    d.className = "clickEffect";
+    d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
+    document.body.appendChild(d);
+    d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
+}
+document.addEventListener('click', clickEffect);
+ScrollReveal({
+    reset: true,
+    distance: '95px',
+    duration: 1500,
+    delay: 250,
+    viewFactor: 0.15
+});
+
+const revealConfig = {
+    origin: 'bottom',
+    scale: 0.5,
+    interval: 200
+};
 
 ScrollReveal({
     reset: true,
