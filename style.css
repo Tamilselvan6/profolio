@@ -6,6 +6,34 @@
 html{
     scroll-behavior: smooth;
 }
+div.clickEffect {
+    position: fixed;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-radius: 50%;
+    animation: clickEffect 0.4s ease-out;
+    z-index: 99999;
+}
+
+@keyframes clickEffect {
+    0% {
+        opacity: 1;
+        width: 0.3em;
+        height: 0.3em;
+        margin: -0.1em;
+        border-width: 0.2em;
+    }
+
+    100% {
+        opacity: 0.2;
+        width: 10em;
+        height: 10em;
+        margin: -5em;
+        border-width: 0.03em;
+    }
+}
+
 body{
     background: rgb(0, 0, 0);
     color: white;
@@ -440,6 +468,23 @@ nav .fas{
     }
     .copyright{
         font-size: 14px;
+    }
+       @keyframes clickEffect {
+        0% {
+            opacity: 1;
+            width: 0.3em;
+            height: 0.3em;
+            margin: -0.1em;
+            border-width: 0.2em;
+        }
+    
+        100% {
+            opacity: 0.2;
+            width: 5em;
+            height: 5em;
+            margin: -2.5em;
+            border-width: 0.03em;
+        }
     }
 }
 
