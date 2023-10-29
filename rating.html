@@ -56,12 +56,10 @@
             font-size: 38px;
             color: gold;
             cursor: pointer;
+            padding: 2px;
             transition: color 0.3s;
         }
 
-        .star.active {
-            color: #f39c12;
-        }
 
         /* Form Fields */
         .name,
@@ -196,8 +194,7 @@
 
             .btn.submit,
             .btn.view-feedback {
-                font-size: 14px;
-                padding: 12px 20px;
+                font-size: medium;
             }
 
             .review {
@@ -240,7 +237,8 @@
                     </div>
                     <div class="btn-group">
                         <button type="submit" id="submitBtn" class="btn submit">Submit</button>
-                        <button type="button" id="viewFeedbackBtn" class="btn view-feedback" onclick="disableButton('viewFeedbackBtn')">View Feedbacks</button>
+                        <button type="button" id="viewFeedbackBtn" class="btn view-feedback"
+                            onclick="disableButton('viewFeedbackBtn')">View Feedbacks</button>
                     </div>
                 </form>
                 <div id="reviewContainer">
@@ -252,7 +250,7 @@
         <span id="notification-message">Thanks for Feedback!</span>
         <button id="close-notification"><i class="fa-regular fa-circle-xmark" style="color: #ffffff;"></i></button>
     </div>
-    
+
     <script>
         const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSrbnUAxkRsS_BHKzj2BMRgbfe7Dp87kZsUeiWTeb-gLnxXQIMEKdarR4kNcI-Y1lts0e0_cCXk_VDL/pub?output=csv';
         const reviewContainer = document.getElementById('reviewContainer');
@@ -288,8 +286,6 @@
         });
         reviewContainer.style.display = 'none';
 
-    </script>
-    <script>
         const allStar = document.querySelectorAll('.rating .star')
         const ratingValue = document.querySelector('.rating input')
 
@@ -303,24 +299,24 @@
                 });
             });
         });
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby8bucHgduYVR-w_nSQL5VJSsSAO4lHdxPwCkGJEzz7ZZWJK5nakAXcY2wTQ1P1_L8qRw/exec';
+
+        const scriptURL = '';
         const reviewForm = document.getElementById('reviewForm'); // Use getElementById instead of forms['submit-to-google-sheet']
-        const notificationSound = new Audio("Notification.mp3");
+
         const notification = document.getElementById('notification');
         const closeNotificationBtn = document.getElementById('close-notification');
 
-    const showNotification = () => {
-        notification.style.display = 'block';
-        setTimeout(() => {
-            hideNotification();
-        }, 3000); // Hide notification after 3 seconds (adjust as needed)
-    };
+        const notificationSound = new Audio("Notification.mp3");
+        const showNotification = () => {
+            notification.style.display = 'block';
+            setTimeout(() => {
+                hideNotification();
+            }, 3000); // Hide notification after 3 seconds (adjust as needed)
+        };
 
-    const hideNotification = () => {
-        notification.style.display = 'none';
-    };
+        const hideNotification = () => {
+            notification.style.display = 'none';
+        };
 
         reviewForm.addEventListener('submit', e => {
             e.preventDefault();
@@ -345,11 +341,12 @@
                 });
         });
         closeNotificationBtn.addEventListener('click', () => {
-        hideNotification();
-    });
+            hideNotification();
+        });
+
 
     </script>
-        <script>
+    <script>
         function disableButton(buttonId) {
             var button = document.getElementById(buttonId);
             if (button) {
