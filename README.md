@@ -40,5 +40,7 @@ Feel free to customize the website according to your needs:
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or create a pull request.
 
 ## Contact
-If you have any questions or want to get in touch with me, feel free to reach out via email at 21cse058tamilselvan@gmail.com
+If you have any questions or want to get in touch with me, feel free to reach out via email at 
+- 21cse058tamilselvan@gmail.com
+- 9384870052
 
