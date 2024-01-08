@@ -461,7 +461,7 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(image/phone-background.png);
+        background-image: url(image/background-ph.png);
     }
 
     .header-text {
