@@ -19,6 +19,30 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+ document.addEventListener('DOMContentLoaded', function () {
+            var socialIcons = document.querySelector('.social-icons-side');
+            var closeIcon = document.querySelector('.close-icon');
+            var expandIcon = document.querySelector('.expand-icon');
+    
+            document.querySelector('.close-icon').addEventListener('click', function () {
+                socialIcons.style.transition = 'transform 0.8s ease';
+                socialIcons.style.transform = 'translateX(-40px)';
+                closeIcon.style.display = 'none';
+                expandIcon.style.display = 'block';
+                setTimeout(function () {
+                    socialIcons.style.display = 'none';
+                }, 400);
+            });
+    
+            document.querySelector('.expand-icon').addEventListener('click', function () {
+                socialIcons.style.transition = 'transform 0.8s ease-in';
+                socialIcons.style.transform = 'translateX(0px)';
+                expandIcon.style.display = 'none';
+                socialIcons.style.display = 'block';
+                closeIcon.style.display = 'block';
+
+            });
+        });
 
 const contactForm = document.getElementById("contact-form");
 const notification = document.getElementById("notification");
@@ -96,7 +120,6 @@ ScrollReveal().reveal('.sub-title, .contact-left, .contact-right', revealConfig)
 ScrollReveal().reveal('.copyright', { origin: 'bottom' });
 ScrollReveal().reveal('.header-img', { scale: 1.7 });
 ScrollReveal().reveal('.tab-links', { origin: 'bottom', interval: 100 });
-ScrollReveal().reveal('.fa-brands', { origin: 'bottom', interval: 150, distance: '35px' });
 ScrollReveal().reveal('.hire-description', { delay: 400 });
 ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
 ScrollReveal().reveal('.project-title, .service-title, .description-about, .skills-title, .contact-title, .gallery-title, .education-title, hr, .hire-title', { origin: 'top' });
@@ -107,5 +130,4 @@ ScrollReveal().reveal('.header-img', { scale: 1.7 });
 ScrollReveal().reveal('.prjct', { scale: 0.5, duration: 1500, interval: 200 });
 ScrollReveal().reveal('.srvc', { interval: 150 });
 ScrollReveal().reveal('.hire-description', { delay: 400 });
-ScrollReveal().reveal('.fa-brands , .fa-solid', { origin: 'bottom', delay: 500, interval: 150, distance: '35px' });
 ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
