@@ -321,6 +321,8 @@
         reviewForm.addEventListener('submit', e => {
             e.preventDefault();
             const formData = new FormData(reviewForm);
+            submitBtn.textContent = 'Loading...';
+
 
             fetch(scriptURL, {
                 method: 'POST',
@@ -332,6 +334,7 @@
                         showNotification();
                         notificationSound.play();
                         reviewForm.reset();
+                        submitBtn.textContent = 'Submit';
                     } else {
                         console.error('Review submission failed!', response);
                     }
