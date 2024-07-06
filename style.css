@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -12,22 +13,23 @@ div.clickEffect {
     position: fixed;
     box-sizing: border-box;
     border-style: solid;
-    border-color: #FFFFFF;
+    border-color: #303030;
     border-radius: 50%;
     animation: clickEffect 0.4s ease-out;
-    z-index: 99999;
+    z-index: 999;
 }
 .social-icons-container {
     position: fixed;
     top: 40%;
     transform: translateY(-50%);
+    z-index: 1000;
 }
 
 .close-icon {
     position: absolute;
     right: -10px;
     top: -10px;
-    color: #bfbfbf;
+    color: #484848;
     font-size: 20px;
     cursor: pointer;
     border-radius: 50px;
@@ -68,7 +70,7 @@ div.clickEffect {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50px;
-    z-index: 1;
+    z-index: 1000;
     transition: left 0.5s ease; 
     display: none;
 }
@@ -81,6 +83,7 @@ div.clickEffect {
         height: 0.3em;
         margin: -0.1em;
         border-width: 0.2em;
+        
     }
 
     100% {
@@ -94,29 +97,36 @@ div.clickEffect {
 
 
 body {
-    background: rgb(0, 0, 0);
-    color: white;
-    font-family: 'poppins', sans-serif;
+    background-color: #eeeeee;
+    color: rgb(44, 44, 44);
+    font-family: 'Alice';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/alice/v20/OpNCnoEEmtHa6GcDrg7shw.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
 #header {
     background-attachment: fixed;
     width: 100%;
+    font-family: 'Alice';
     height: 100vh;
-    background-image: url(image/background-hd.png);
+    background-image: url(/image/bg_image.png);
     background-position: center;
     background-size: cover;
 }
 
 .logo {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 45px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #001c39;
 }
 
 .container {
     padding: 10px 10%;
 }
-
 nav {
     display: flex;
     align-items: center;
@@ -131,9 +141,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
     position: relative;
 }
 
@@ -141,7 +152,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #003366;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -153,24 +164,64 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
+    margin-top: 14%;
     font-size: 30px;
 }
 
 .header-text h1 {
-    font-size: 60px;
+    font-size: 52px;
     margin-top: 20px;
 }
 
 .header-text h1 span {
-    color: #ff004f;
+    color: #003366;
 }
+.header-text p{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f-btn {
+    display: block;
+    width: fit-content;
+    font-size: 18px;
+    border: 1px solid #001b36;
+    margin-top: 120px;
+    padding: 14px 40px;
+    border-radius: 24px;
+    text-decoration: none;
+    background-color: #002c58;
+    color: #ffffff;
+    transition: background 0.5s;
+}
+.f-btn:hover{
+    color:#0050a0;
+    background-color: #ffffff;
+}
+.f-btn i {
+    margin-left: 5px;
+}
+
+.header-image img {
+    max-width: 550px;
+    height: auto;
+    margin-top: 25%;
+    border-radius: 10px;
+    transform-origin: center;
+}
+
 
 /* ----------about----------- */
 #about {
+    background-color: #dbdbdb;
     padding: 80px 0;
-    color: #ababab;
-    background: rgb(10, 10, 10);
+    color: #181818;
 }
 
 .row {
@@ -192,22 +243,25 @@ nav ul li a:hover::after {
     flex-basis: 60%;
 
 }
-
+.about-col-2 p{
+    font-size: 18px;
+}
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #0e0e0e;
 }
 
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    
 }
 
 .tab-links {
     margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     cursor: pointer;
     position: relative;
 }
@@ -216,7 +270,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #ff004f;
+    background-color: #003366;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -233,7 +287,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #f82165;
+    color: #003366;
 }
 
 .tab-contents {
@@ -257,40 +311,62 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-    background: #262626;
+    background: #d5d5d5;
+    text-align: center;
     padding: 40px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.services-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
+.services-list div img {
+    width: 80px;  /* Same size as the original icons */
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+    margin-bottom: 12px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.services-list div:hover img {
+    animation: pulse 1s infinite;  
 }
 
 .services-list div h2 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 550;
     margin-bottom: 15px;
 }
+.services-list div p{
+    color: #000;
+    font-size: 16px;
+}
+.services-list div:hover {
+    background-color: rgb(244, 244, 244);
+    
+}
 
-.services-list div a {
+/* .services-list div a {
     text-decoration: none;
-    color: #fff;
-    font-size: 12px;
+    color: #0050a0;
+    font-size: 18px;
     margin-top: 20px;
     display: inline-block;
-}
-
-.services-list div:hover {
-    background: #ff004f;
-    transform: translateY(-10px);
-}
+} */
 
 /* -----------------portfolio--------------- */
 #portfolio {
+
     padding: 50px 0;
 }
 
@@ -312,15 +388,17 @@ nav ul li a:hover::after {
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
+    border: 1px solid #c0c0c0;
 }
 
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #000000);
     border-radius: 10px;
     position: absolute;
     left: 0;
+    color: #fff;
     bottom: 0;
     overflow: hidden;
     display: flex;
@@ -329,18 +407,19 @@ nav ul li a:hover::after {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     transition: height 0.5s;
 }
 
 .layer h3 {
-    font-weight: 500;
+    color: #fff;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
 .layer a {
     margin-top: 20px;
-    color: #f82165;
+    color: #003366;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -359,20 +438,77 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
+.github-cls {
+    margin: 10px 140px 90px 140px;
+    padding: 0;
+    height: 100%;
+    background: url('./image/bg_github.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.git {
+    padding: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-cls:hover .git {
+    transform: scale(1.05);
+}
+
+.github-cls h1 {
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.github-cls p {
+    color: #e2e2e2;
+    font-size: 18px;
+    margin: 8px 0 52px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.github-cls a {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 24px;
+    border: 1px solid white;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.github-cls a i{
+    padding-right: 12px;
+}
+
+.github-cls a:hover {
+    background: #333;
+    transform: scale(1.1);
+}
+
+/* common btn */
 .btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #003366;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #003366;
     transition: background 0.5s;
 }
 
 .btn:hover {
-    background: #ff004f;
+    background: #003366;
+    color: white;
 }
 
 /* -------------------certificate------------- */
@@ -397,12 +533,13 @@ nav ul li a:hover::after {
 
 .gallery::-webkit-scrollbar {
     height: 8px !important;
+
 }
 
 .gallery::-webkit-scrollbar-thumb {
-    background-color: #ff004f;
+    background-color: #003366;
     border-radius: 60px;
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .gallery::-webkit-scrollbar-track {
@@ -416,13 +553,15 @@ nav ul li a:hover::after {
 
 .potrait {
     height: 330px;
-    width: auto;
+    width: 100%;
     margin-right: 12px;
     cursor: zoom-in;
 }
 
 
+
 /* ------------------contact------------------- */
+
 .contact-left {
     flex-basis: 35%;
 }
@@ -433,10 +572,11 @@ nav ul li a:hover::after {
 
 .contact-left p {
     margin-top: 30px;
+    font-size: 18px;
 }
 
 .contact-left p i {
-    color: #ff004f;
+    color: #003366;
     margin-right: 15px;
     font-size: 25px;
 
@@ -456,18 +596,22 @@ nav ul li a:hover::after {
 }
 
 .services-list a:hover {
-    color: #ff004f;
+    color: #003366;
     transform: translateY(-5px);
 }
 
 .contact-left a {
-    color: white;
+    color: rgb(16, 16, 16);
     text-decoration: none;
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: #ff004f;
+    background: #003366;
+    color: white;
+}
+.btn.btn2.download{
+    background: #001830;
 }
 
 .contact-right form {
@@ -479,16 +623,25 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #141414;
     padding: 15px;
     margin: 15px;
-    color: #fff;
     font-size: 18px;
     border-radius: 6px;
     border: 1px solid #ababab;
     background: rgba(255, 255, 255, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.contact-right input[type="text"]:focus,
+.contact-right input[type="email"]:focus,
+.contact-right textarea:focus {
+    border-color: #000000;
+    color: #000;
+    font-size: 18px;
+    background-color: rgba(183, 183, 183, 0.15);
+}
 form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
@@ -517,26 +670,59 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(image/background-ph.png);
+        background-image: url(image/bg_image.png);
+        height: 80vh;
+    }
+
+    
+    .flex-header {
+        flex-direction: column;
+        text-align: center;
     }
 
     .header-text {
-        margin-top: 100%;
+        max-width: 100%;
+        margin-top: 20px;
         font-size: 16px;
-        padding-top: 120px;
+        padding-top: 20px;
+        text-align: center;
     }
 
     .header-text h1 {
+        font-size: 38px;
+        padding-top: 24px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+        padding: 26px 0px 52px 0px;
+    }
+
+    .header-text a {
+        margin-top: 20px;
+        font-size: 18px;
+        display: block;
+        margin: 20px auto; 
+    }
+    .header-image img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 60px;
+    }
+
+    .logo {
+        margin-top: 15px;
         font-size: 30px;
     }
 
     nav .fas {
+        margin-top: 15px;
         display: block;
         font-size: 25px;
     }
 
     nav ul {
-        background: rgb(255, 0, 79);
+        background: #989898bb;
         position: fixed;
         top: 0;
         right: -200px;
@@ -548,7 +734,7 @@ nav .fas {
     }
 
     nav ul li a::after {
-        background: #fff;
+        background: #003366;
     }
 
     nav ul li {
@@ -592,6 +778,29 @@ nav .fas {
     .about-col-2 {
         font-size: 14px;
     }
+    .github-cls {
+        margin: 0px 40px 20px 40px;
+        background-size: cover;
+    }
+
+    .git {
+        padding: 40px;
+    }
+
+    .github-cls h1 {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+
+    .github-cls p {
+        font-size: 12px;
+        margin: 8px 0 36px 0;
+    }
+
+    .github-cls a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 
     .tab-links {
         font-size: 16px;
@@ -611,7 +820,7 @@ nav .fas {
         font-size: 14px;
     }
 
-    
+
 
     @keyframes clickEffect {
         0% {
@@ -621,7 +830,7 @@ nav .fas {
             margin: -0.1em;
             border-width: 0.2em;
         }
-    
+
         100% {
             opacity: 0.2;
             width: 5em;
@@ -630,7 +839,7 @@ nav .fas {
             border-width: 0.03em;
         }
     }
-    
+
 
 }
 
@@ -638,9 +847,11 @@ nav .fas {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #f82165;
+    background-color: #004080;
     border: 1px solid #ccc;
     padding: 10px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
     display: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -678,7 +889,7 @@ nav .fas {
 }
 
 #scrollToTop a:active {
-    background-color: #ff004f;
+    background-color: #003366;
 }
 
 #scrollToTop a i {
@@ -701,7 +912,7 @@ nav .fas {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ff004f;
+    background: #003366;
     border-radius: 5px;
 }
 
@@ -715,7 +926,7 @@ nav .fas {
 }
 
 #feedbackBtn a {
-    background-color: #ff004f;
+    background-color: #003366;
     color: #fff;
     padding: 10px 15px;
     border-radius: 6px;
@@ -725,3 +936,4 @@ nav .fas {
     gap: 5px;
     font-size: 14px;
 }
+
