@@ -111,7 +111,7 @@ body {
     width: 100%;
     font-family: 'Alice';
     height: 100vh;
-     background-image: url('./image/bg_image.png');
+     background-image: url('image/bg_image.png');
     background-position: center;
     background-size: cover;
 }
