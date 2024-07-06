@@ -778,8 +778,9 @@ nav .fas {
     .about-col-2 {
         font-size: 14px;
     }
+    
     .github-cls {
-        margin: 0px 40px 20px 40px;
+        margin: 0px 40px 10px 40px;
         background-size: cover;
     }
 
@@ -788,20 +789,18 @@ nav .fas {
     }
 
     .github-cls h1 {
-        font-size: 20px;
-        margin: 8px 0;
+        font-size: 18px;
     }
 
     .github-cls p {
+        margin: 8px 0 22px 0;
         font-size: 12px;
-        margin: 8px 0 36px 0;
     }
 
     .github-cls a {
         padding: 8px 16px;
-        font-size: 14px;
+        font-size: 12px;
     }
-
     .tab-links {
         font-size: 16px;
         margin-right: 20px;
