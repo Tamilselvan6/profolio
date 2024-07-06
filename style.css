@@ -688,16 +688,16 @@ nav .fas {
         text-align: center;
     }
 
-    .header-text h1 {
-        font-size: 38px;
-        padding-top: 24px;
+      .header-text h1 {
+        font-size: 28px;
+        padding-top: 18px;
     }
 
     .header-text p {
-        font-size: 18px;
+        font-size: 16px;
         padding: 26px 0px 52px 0px;
     }
-
+    
     .header-text a {
         margin-top: 20px;
         font-size: 18px;
