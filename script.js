@@ -131,3 +131,11 @@ ScrollReveal().reveal('.prjct', { scale: 0.5, duration: 1500, interval: 200 });
 ScrollReveal().reveal('.srvc', { interval: 150 });
 ScrollReveal().reveal('.hire-description', { delay: 400 });
 ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
+ScrollReveal().reveal('.header-image img', {
+    duration: 2500,
+    scale: 0.5,
+    rotate: { x: 0, y: 180, z: 0 },
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    reset: true
+});
+
