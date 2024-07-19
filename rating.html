@@ -11,15 +11,16 @@
     <script src="https://kit.fontawesome.com/0a682b9dd5.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <style>
-* {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            background: #f0f0f0;
-            color: #333333;
-            font-family: 'Poppins', sans-serif;
+            background: rgb(0, 0, 0);
+            color: white;
+            font-family: 'poppins', sans-serif;
         }
 
         .container {
@@ -30,20 +31,18 @@
             border-radius: 8px;
             padding: 20px;
             width: auto;
-            background-color: #f0f0f0;
         }
 
         .sub-title {
             font-size: 50px;
             font-weight: 600;
-            color: #003366;
+            color: #fff;
         }
 
         .sub-content {
             letter-spacing: 4px;
             margin: 10px;
             margin-bottom: 25px;
-            color: #333333;
         }
 
         /* Rating Stars */
@@ -61,10 +60,10 @@
             transition: color 0.3s;
         }
 
+
         /* Form Fields */
         .name,
         .opinion {
-            
             margin-bottom: 15px;
         }
 
@@ -73,7 +72,6 @@
             margin-bottom: 5px;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
-            font-weight: 400;
         }
 
         input[type="text"],
@@ -82,8 +80,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 14px;
             resize: vertical;
         }
 
@@ -102,18 +99,29 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        form textarea,
+        form input {
+            font-size: x-large;
+            color: #fff;
+            border-radius: 6px;
+            border: 1px solid #ababab;
+            background: rgba(255, 255, 255, 0.1);
+            font-family: monospace;
+        }
+
         .btn.submit,
         .btn.view-feedback {
-            background-color: #003366;
+            background-color: #ff004f;
             color: #fff;
             border-radius: 5px;
             padding: 12px 35px;
             font-size: large;
         }
 
+
         #reviewContainer {
             margin-top: 20px;
-            border-top: 1px solid #003366;
+            border-top: 1px solid #616161;
             padding-top: 20px;
         }
 
@@ -126,13 +134,13 @@
         }
 
         .review p {
-            font-size: 16px;
-            color: #001a34;
+            font-size: 14px;
+            color: #ffffff;
             margin-bottom: 5px;
         }
 
         .review p b {
-            color: #003366;
+            color: #ffffff;
             margin-right: 5px;
         }
 
@@ -146,9 +154,10 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #003366;
+            background: #ff004f;
             border-radius: 5px;
         }
+
 
         @media (max-width: 768px) {
             .container {
