@@ -109,6 +109,19 @@ const revealConfig = {
     interval: 200
 };
 
+document.addEventListener('scroll', function() {
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const copyrightSection = document.querySelector('.copyright');
+    const rect = copyrightSection.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        feedbackBtn.classList.add('hidden');
+    } else {
+        feedbackBtn.classList.remove('hidden');
+    }
+});
+
+
 ScrollReveal().reveal('.logo, #sidemenu, .header-text', { origin: 'top', reset: false });
 ScrollReveal().reveal('.about-col-1', { origin: 'bottom' });
 ScrollReveal().reveal('.about-col-2', { origin: 'bottom' });
