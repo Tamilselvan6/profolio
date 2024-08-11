@@ -182,11 +182,11 @@ nav ul li a:hover::after {
     text-decoration: none;
     background-color: #3e0014;
     color: #ffffff;
-    transition: background 0.5s;
+    transition:  0.5s;
 }
 .f-btn:hover{
     color:#ff004f;
-    background-color: #ffffff;
+    background-color: #e5e5e5;
 }
 .f-btn i {
     margin-left: 5px;
@@ -601,9 +601,12 @@ nav .fas {
     #header {
         background-image: url(image/background-ph.png);
     }
+    .logo{
+        font-size: 32px;
+    }
 
     .header-text {
-        margin-top: 100%;
+        margin-top: 85%;
         padding-top: 140px;
         padding-right: 0%;
     }
@@ -620,9 +623,7 @@ nav .fas {
         font-size: 18px;
     }
     .f-btn {
-        margin-top: 60px;
-        display: block;
-        width: fit-content;
+        margin-top: 50px;
         font-size: 18px;
         border-radius: 20px;
         padding: 8px 24px;
@@ -844,4 +845,8 @@ nav .fas {
     align-items: center;
     gap: 5px;
     font-size: 14px;
+}
+#feedbackBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
