@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel=icon href="/image/me.jpg">
+    <script src="https://kit.fontawesome.com/0a682b9dd5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style-merge.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #060606;
+            color: #ffffff;
+            font-family: 'Alice';
+            line-height: 1.6;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .back-icon {
+            position: absolute;
+            left: 0;
+            color: white;
+            font-size: 32px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-icon:hover {
+            color: #e60042;
+        }
+
+        .back-icon i {
+            vertical-align: middle;
+        }
+
+        .certificate-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .certificate-icon h2 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .certificate-icon img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .certificate {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate img {
+            width: 100%;
+            max-height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff004f;
+        }
+
+        .certificate:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .certificate .details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .certificate .details h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .back-icon {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+
+            .certificate:hover {
+                transform: translateY(0px);
+            }
+
+            .certificate-icon img {
+                height: 30px;
+                width: 30px;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .certificates {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .certificate img {
+                max-height: 150px;
+            }
+
+            .certificate .details {
+                padding: 4px;
+            }
+
+            .certificate .details h3 {
+                font-size: 14px;
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .back-icon {
+                font-size: 20px;
+            }
+
+            .certificate-icon img {
+                height: 25px;
+                width: 25px;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+            }
+
+            .certificates {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .certificate:hover {
+                transform: translateY(0px);
+            }
+
+            .certificate .details {
+                padding: 2px;
+            }
+
+            .certificate .details h3 {
+                font-size: 12px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html#gallery" class="back-icon">
+                <i class="fa-solid fa-reply-all"></i>
+            </a>
+            <h1>My Certificates</h1>
+        </div>
+        <div class="section">
+            <div class="certificate-icon">
+                <img src="./Icon/achievement.png" alt="Competition Achievements Icon">
+                <h2>Competition Achievements</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/VCET 1place.jpg" data-lightbox="certificate"
+                        alt="Certificate">
+                    <div class="details">
+                        <h3>1st Place Lepidoz’23 Quiz</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/Young India - Startup.jpg" alt="Certificate">
+                    <div class="details">
+                        <h3>Top 5 teams in Yukthi - Startup</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/2nd place - AI Video Context.jpg"
+                        alt="Certificate">
+                    <div class="details">
+                        <h3>Runner-up in "My Idea My India" </h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/Kamarajar - Connection Round.jpg"
+                        alt="Certificate">
+                    <div class="details">
+                        <h3>1st Place in Tecnical Connection</h3>
+                    </div>
+                </div>
+
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/Kamarajar - pp.jpg" alt="Certificate">
+                    <div class="details">
+                        <h3>1st Place Paper mania & Project Explorer</h3>
+                    </div>
+                </div>
+
+                <div class="certificate">
+                    <img src="./certificates/Symposium Certificate/2nd in symposium NGP College.jpeg"
+                        alt="Certificate">
+                    <div class="details">
+                        <h3>2nd Place in Cryptic Hunt</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="certificate-icon">
+                <img src="./Icon/Infosys SpringBoard.png" alt="Infosys Springboard Icon">
+                <h2>Infosys Springboard</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="./certificates/Infosys springboard/React js.png" alt="Certificate">
+                    <div class="details">
+                        <h3>React js</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Infosys springboard/Introduction to  Artificial Intelligence.png"
+                        alt="Certificate">
+                    <div class="details">
+                        <h3>Introduction to Artificial Intelligence</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Infosys springboard/Introduction to Data Science.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Introduction to Data Science</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Infosys springboard/Introduction to OpenAI GPT Models.png"
+                        alt="Introduction to OpenAI GPT Models">
+                    <div class="details">
+                        <h3>Introduction to OpenAI GPT Models</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Infosys springboard/Time Management.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Time Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="certificate-icon">
+                <img src="./Icon/SkillRack.png" alt="SkillRack Icon">
+                <h2>SkillRack</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="./certificates/Skill Rack/JAVA - 50 VERY-EASY CHALLENGES.png" alt="Certificate">
+                    <div class="details">
+                        <h3>JAVA - 50 VERY-EASY CHALLENGES</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Skill Rack/JAVA - 50 EASY CHALLENGES.png" alt="Certificate">
+                    <div class="details">
+                        <h3>JAVA - 50 EASY CHALLENGES</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+
+            <div class="certificate-icon">
+                <img src="./Icon/Hackerrank.png" alt="Hacker Rank Icon">
+                <h2>Hacker Rank</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="./certificates/Hacker Rank/HackerRank Java.png" alt="Certificate">
+                    <div class="details">
+                        <h3>HackerRank Java</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Hacker Rank/HackerRank Python.png" alt="Certificate">
+                    <div class="details">
+                        <h3>HackerRank Python</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+
+            <div class="certificate-icon">
+                <img src="./Icon/Learnathon.png" alt="Learnthon Icon">
+                <h2>Learnthon</h2>
+            </div>
+            <div class="certificates">
+
+                <div class="certificate">
+                    <img src="./certificates/learnathon/Learnathon 2023.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Learnathon Certificate</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/Explore automation development with.jpg" alt="Certificate">
+                    <div class="details">
+                        <h3>Explore automation development with Uipath Studio</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/Mathwork - Computer Vision Onramp.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Mathwork - Computer Vision Onramp</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/MongoDB Basics - ICT Academy Learnathon.png"
+                        alt="Certificate 10">
+                    <div class="details">
+                        <h3>MongoDB Basics</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/Microsoft_MachineLearningChallenge.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Microsoft MachineLearning</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/Microsoft_AIBuilderChallenge.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Microsoft AI Builder</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/celonis.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Celonis Foundation</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/learnathon/celonis- mining.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Celonic Mining</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+
+            <div class="certificate-icon">
+                <img src="./Icon/Internship.png" alt="Internship Icon">
+                <h2>Internship</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate ">
+                    <img src="./certificates/Intership/KevellGuru - Web Development Internship.png"
+                        alt="Certificate 10">
+                    <div class="details">
+                        <h3>Web Development Intern</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Intership/UIUX codsoft.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Web Designing Intern</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+
+            <div class="certificate-icon">
+                <img src="./Icon/Certificate.png" alt="Technical Certifications Icon">
+                <h2>Other Technical Certifications</h2>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="./certificates/Basic Java - Course.jpg" alt="Certificate">
+                    <div class="details">
+                        <h3>Core Java - Course</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/Nptel Elite+Silver.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Privacy and Security in Online Social Media - Nptel Elite+Silver</h3>
+                    </div>
+                </div>
+
+                <div class="certificate">
+                    <img src="./certificates/Reactjs Letsupgrade.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Reactjs Letsupgrade</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/saylor - database.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Introduction to Modern Database System</h3>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <img src="./certificates/GuviCertification.png" alt="Certificate">
+                    <div class="details">
+                        <h3>Guvi Python</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
