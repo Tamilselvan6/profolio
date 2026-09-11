@@ -41,6 +41,6 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 ## Contact
 If you have any questions or want to get in touch with me, feel free to reach out via email at 
-- 21cse058tamilselvan@gmail.com
+- sritamilselvan6@gmail.com
 - 9384870052
 

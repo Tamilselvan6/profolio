@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /rating.html
+
+Sitemap: https://tamilselvan6.github.io/profolio/sitemap.xml

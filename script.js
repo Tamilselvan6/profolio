@@ -8,14 +8,14 @@ function closemenu() {
 }
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
-function opentab(tabname) {
+function opentab(evt, tabname) {
     for (tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
     for (tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
-    event.currentTarget.classList.add("active-link");
+    evt.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
 
@@ -57,7 +57,7 @@ contactForm.addEventListener("submit", function (event) {
     const message = event.target.Message.value;
 
     const subject = "New Message from " + name;
-    const mailtoLink = "mailto:21cse058tamilselvan@gmail.com" +
+    const mailtoLink = "mailto:sritamilselvan6@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(message);
 
@@ -96,23 +96,35 @@ function clickEffect(e) {
 }
 document.addEventListener('click', clickEffect);
 ScrollReveal({
-    reset: true,
-    distance: '95px',
-    duration: 1500,
-    delay: 250,
-    viewFactor: 0.15
+    reset: false,
+    distance: '30px',
+    duration: 800,
+    delay: 80,
+    viewFactor: 0.15,
+    easing: 'ease-out'
 });
+ScrollReveal().reveal('.logo, #sidemenu', { origin: 'top', reset: false, distance: '15px' });
+ScrollReveal().reveal('.header-text', { origin: 'left' });
+ScrollReveal().reveal('.header-img', { origin: 'right' });
+ScrollReveal().reveal('.about-col-1', { origin: 'left' });
+ScrollReveal().reveal('.about-col-2', { origin: 'right' });
+ScrollReveal().reveal('#services .sub-title', { origin: 'top' });
+ScrollReveal().reveal('.services-list > div', { origin: 'bottom', interval: 120 });
+ScrollReveal().reveal('#portfolio .sub-title', { origin: 'top' });
+ScrollReveal().reveal('.timeline-item', { origin: 'bottom', interval: 80 });
+ScrollReveal().reveal('.git', { origin: 'bottom' });
+ScrollReveal().reveal('.gallery-about', { origin: 'left' });
+ScrollReveal().reveal('.gallery', { origin: 'bottom' });
+ScrollReveal().reveal('#contact .sub-title', { origin: 'top' });
+ScrollReveal().reveal('.contact-left', { origin: 'left' });
+ScrollReveal().reveal('.contact-right', { origin: 'right' });
+ScrollReveal().reveal('.copyright', { origin: 'bottom' });
 
-const revealConfig = {
-    origin: 'bottom',
-    scale: 0.5,
-    interval: 200
-};
-
-document.addEventListener('scroll', function() {
-    const feedbackBtn = document.getElementById('feedbackBtn');
-    const copyrightSection = document.querySelector('.copyright');
-    const rect = copyrightSection.getBoundingClientRect();
+document.addEventListener('scroll', function () {
+    var feedbackBtn = document.getElementById('feedbackBtn');
+    var copyrightSection = document.querySelector('.copyright');
+    if (!feedbackBtn || !copyrightSection) return;
+    var rect = copyrightSection.getBoundingClientRect();
 
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
         feedbackBtn.classList.add('hidden');
@@ -120,35 +132,3 @@ document.addEventListener('scroll', function() {
         feedbackBtn.classList.remove('hidden');
     }
 });
-
-
-ScrollReveal().reveal('.logo, #sidemenu, .header-text', { origin: 'top', reset: false });
-ScrollReveal().reveal('.about-col-1', { origin: 'bottom' });
-ScrollReveal().reveal('.about-col-2', { origin: 'bottom' });
-ScrollReveal().reveal('.sub-title, .services-list', revealConfig);
-ScrollReveal().reveal('.sub-title, .work-list, .btn', revealConfig);
-ScrollReveal().reveal('.gallery-about', { origin: 'bottom' });
-ScrollReveal().reveal('.gallery', { origin: 'left', interval: 150 });
-ScrollReveal().reveal('.sub-title, .contact-left, .contact-right', revealConfig);
-ScrollReveal().reveal('.copyright', { origin: 'bottom' });
-ScrollReveal().reveal('.header-img', { scale: 1.7 });
-ScrollReveal().reveal('.tab-links', { origin: 'bottom', interval: 100 });
-ScrollReveal().reveal('.hire-description', { delay: 400 });
-ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
-ScrollReveal().reveal('.project-title, .service-title, .description-about, .skills-title, .contact-title, .gallery-title, .education-title, hr, .hire-title', { origin: 'top' });
-ScrollReveal().reveal('.img-about, .h6-head, .description-hire-button, .email, .gallery-img', { origin: 'right' });
-ScrollReveal().reveal('.srvc, .text, .edc', { origin: 'bottom' });
-ScrollReveal().reveal('.h1-head, .hire-description, .name, .gallery-about', { origin: 'left' });
-ScrollReveal().reveal('.header-img', { scale: 1.7 });
-ScrollReveal().reveal('.prjct', { scale: 0.5, duration: 1500, interval: 200 });
-ScrollReveal().reveal('.srvc', { interval: 150 });
-ScrollReveal().reveal('.hire-description', { delay: 400 });
-ScrollReveal().reveal('.h1-head, .h6-head, .header-img', { delay: 3050, reset: true, useDelay: 'onload' });
-ScrollReveal().reveal('.header-image img', {
-    duration: 2500,
-    scale: 0.5,
-    rotate: { x: 0, y: 180, z: 0 },
-    easing: 'cubic-bezier(0.5, 0, 0, 1)',
-    reset: true
-});
-
