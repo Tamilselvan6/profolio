@@ -24,9 +24,49 @@ body {
     --accent: #B45309;
     --accent-light: #D97706;
     --accent-soft: #FDECC8;
+    --bg-rgb: 250, 247, 242;
 }
 
-h1, h2, h3 {
+:root[data-theme="dark"] {
+    --bg: #15130F;
+    --bg-soft: #1D1A15;
+    --bg-elevated: #221F1A;
+    --border: #3A352C;
+    --text: #F3EFE6;
+    --text-muted: #C4BCAC;
+    --text-faint: #8F887A;
+    --accent: #D97706;
+    --accent-light: #F59E0B;
+    --accent-soft: #3A2A12;
+    --bg-rgb: 21, 19, 15;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--bg);
+    color: var(--text);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
     font-family: 'Sora', 'Inter', sans-serif;
 }
 
@@ -39,6 +79,7 @@ div.clickEffect {
     animation: clickEffect 0.4s ease-out;
     z-index: 99999;
 }
+
 .social-icons-container {
     position: fixed;
     top: 40%;
@@ -53,7 +94,7 @@ div.clickEffect {
     font-size: 20px;
     cursor: pointer;
     border-radius: 50px;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .social-icons-side {
@@ -73,22 +114,26 @@ div.clickEffect {
     justify-content: center;
     width: 40px;
     height: 40px;
-    font-size: 18px ;
+    font-size: 18px;
     text-align: center;
     line-height: 1;
     color: #ffffff;
     text-decoration: none;
 }
+
 .social-icons-side li {
     transition: background-color 0.3s ease;
 }
+
 .social-icons-side li:hover {
     background-color: var(--accent) !important;
 }
+
 .social-icons-side li a:hover {
     transform: scale(1.3);
     transition: transform 0.3s ease;
 }
+
 .expand-icon {
     position: absolute;
     top: 50%;
@@ -97,7 +142,7 @@ div.clickEffect {
     cursor: pointer;
     border-radius: 50px;
     z-index: 1;
-    transition: left 0.5s ease; 
+    transition: left 0.5s ease;
     display: none;
 }
 
@@ -125,7 +170,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    
+
 }
 
 #header {
@@ -159,15 +204,21 @@ nav {
     right: 0;
     z-index: 5;
     padding: 12px 10%;
-    background: rgba(250, 247, 242, 0.9);
+    background: rgba(var(--bg-rgb), 0.9);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--border);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 12px;
 }
 
 nav ul li a {
@@ -223,11 +274,11 @@ nav ul li a:hover::after {
 .header-img img {
     height: 380px;
     border-radius: 12px;
-    mask-image: 
+    mask-image:
         linear-gradient(to bottom, transparent, black 15%, black 100%, transparent),
         linear-gradient(to right, transparent, black 15%, black 100%, transparent);
     -webkit-mask-composite: source-in;
-    mask-composite: intersect; 
+    mask-composite: intersect;
 }
 
 .header-text h1 {
@@ -238,24 +289,28 @@ nav ul li a:hover::after {
 .header-text h1 span {
     color: var(--accent-light);
 }
+
 .role-line {
     font-size: 24px;
     font-weight: 600;
     color: var(--accent);
     margin-top: 32px;
 }
+
 .header-desc {
     font-size: 18px;
     line-height: 1.7;
     color: var(--text-muted);
     margin-top: 10px;
 }
+
 .header-btns {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 34px;
 }
+
 .f-btn {
     display: inline-block;
     width: fit-content;
@@ -266,21 +321,25 @@ nav ul li a:hover::after {
     text-decoration: none;
     background-color: transparent;
     color: var(--accent);
-    transition:  0.3s;
+    transition: 0.3s;
 }
-.f-btn:hover{
+
+.f-btn:hover {
     color: #fff;
     background-color: var(--accent);
 }
+
 .f-btn-primary {
     background-color: var(--accent);
     color: #fff;
 }
+
 .f-btn-primary:hover {
     background-color: var(--accent-light);
     border-color: var(--accent-light);
     color: #fff;
 }
+
 .f-btn i {
     margin-left: 5px;
 }
@@ -310,15 +369,18 @@ nav ul li a:hover::after {
     border: 1px solid var(--border);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
-.about-col-2 p{
+
+.about-col-2 p {
     font-size: 16px;
     line-height: 1.7;
     color: var(--text-muted);
 }
+
 .about-col-2 {
     flex-basis: 60%;
 
 }
+
 .sub-title {
     font-size: 60px;
     font-weight: 600;
@@ -423,6 +485,7 @@ nav ul li a:hover::after {
     color: #fff;
     transform: translateY(-10px);
 }
+
 .services-list div:hover i,
 .services-list div:hover a {
     color: #fff;
@@ -432,7 +495,7 @@ nav ul li a:hover::after {
     margin: 10px 140px 90px 140px;
     padding: 0;
     height: 100%;
-    background: url('./image/bg_github.jpg') no-repeat center center fixed; 
+    background: url('./image/bg_github.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     border-radius: 20px;
@@ -474,7 +537,7 @@ nav ul li a:hover::after {
     transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.github-cls a i{
+.github-cls a i {
     padding-right: 12px;
 }
 
@@ -746,6 +809,7 @@ nav ul li a:hover::after {
     display: inline-block;
     transition: transform 0.5s, color 0.5s;
 }
+
 .social-icons a:hover {
     color: var(--accent);
 }
@@ -813,8 +877,17 @@ nav .fas {
     display: none;
 }
 
+.theme-toggle .fas {
+    display: inline-block !important;
+}
+
 @media only screen and (max-width: 600px) {
-    
+
+    :root[data-theme="dark"] nav ul li a,
+    :root[data-theme="dark"] nav ul i  {
+        color: #000;
+    }
+
     #header {
         width: 100%;
         min-height: auto;
@@ -905,9 +978,21 @@ nav .fas {
         display: block;
         font-size: 25px;
     }
-    .role-line, .header-desc {
+
+    .theme-toggle{
+        margin-right: 10px;
+    }
+
+
+    .theme-toggle .fas {
+        font-size: 20px;
+    }
+
+    .role-line,
+    .header-desc {
         font-size: 15px;
     }
+
     .f-btn {
         font-size: 16px;
         border-radius: 20px;
@@ -946,6 +1031,10 @@ nav .fas {
         cursor: pointer;
     }
 
+    .logo {
+        font-size: 32px;
+    }
+
     .grid {
         display: block;
     }
@@ -975,10 +1064,11 @@ nav .fas {
     .about-col-2 {
         font-size: 14px;
     }
-    .about-col-2 p{
+
+    .about-col-2 p {
         font-size: 14px;
     }
-    
+
     .github-cls {
         margin: 0px 40px 10px 40px;
         background-size: cover;
@@ -1021,7 +1111,7 @@ nav .fas {
         font-size: 14px;
     }
 
-    
+
 
     @keyframes clickEffect {
         0% {
@@ -1031,7 +1121,7 @@ nav .fas {
             margin: -0.1em;
             border-width: 0.2em;
         }
-    
+
         100% {
             opacity: 0.2;
             width: 5em;
@@ -1040,7 +1130,7 @@ nav .fas {
             border-width: 0.03em;
         }
     }
-    
+
 
 }
 
@@ -1119,34 +1209,8 @@ nav .fas {
 }
 
 
-/* Feedback button */
-#feedbackBtn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#feedbackBtn a {
-    background-color: var(--accent);
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-}
 .btn-coffee {
     background-color: #FFDD00 !important;
     color: #221F1B !important;
     font-weight: 600;
-}
-#feedbackBtn.hidden {
-    opacity: 0;
-    pointer-events: none;
 }

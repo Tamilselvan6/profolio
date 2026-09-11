@@ -31,6 +31,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-merge.css">
     <link rel=icon href="image/me.jpg">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <script src="https://kit.fontawesome.com/0a682b9dd5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
 
@@ -90,16 +97,21 @@
         <div class="container">
             <nav>
                 <h1 class="logo"><span style="color: #D97706;">T</span>amilSelvan</h1>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Expertise</a></li>
-                    <li><a href="#portfolio">Journey</a></li>
-                    <li><a href="#gallery">Certificate</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                <div class="nav-right">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Expertise</a></li>
+                        <li><a href="#portfolio">Journey</a></li>
+                        <li><a href="#gallery">Certificate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </div>
             </nav>
             <div class="header-content">
                 <div class="header-text">
@@ -378,13 +390,7 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </div>
-    <div id="feedbackBtn">
-            
-            <a href="rating.html" class="btn-feedback">
-                <i class="fas fa-comment"></i> Give Feedback
-            </a>
-        </div>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
